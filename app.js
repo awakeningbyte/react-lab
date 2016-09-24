@@ -1,10 +1,12 @@
-import react, {Component} from "react";
-import {Render} from "react-dom";
+import React, {Component} from "react";
+import {render} from "react-dom";
 
 class AppleStore extends Component {
 	render() {
 		return <div> "Hello world" </div>
 	}
 
-	Render(<AppleStore />, document.findElementById("content"));
 }
+
+
+render(<AppleStore />, document.getElementById("content"));
