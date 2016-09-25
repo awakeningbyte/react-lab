@@ -33,6 +33,10 @@ module.exports = {
 			{ 
 				test: /\.scss$/,
 				loader: 'style!css!sass?outputStyle=compressed'
+			},
+			{
+				test: /\.svg$/,
+				loader: 'url'
 			}
 
 		]
