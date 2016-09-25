@@ -5,8 +5,21 @@ import Search from './search';
 import models from 'json!./data/models.json';
 
 class Main extends Component {
+	constructor() {
+		super();
+		this.state = {
+			searchText: "",
+			models: []
+		}	
+	}
+
+	componentDidMount() {
+		this.setState({models: models});
+	}
+
 	render() {
 		return <div>
+			<h1> Compoent</h1>
 			<Search/>
 			<List/>
 		</div>
