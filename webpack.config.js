@@ -5,16 +5,28 @@ module.exports = {
 	entry: "./app.js",
 	output: {
 		path:	"./dist",
-		filename: "bundle.js"
+		filename: "bundle.js",
+		publicPath: "/dist"
+			
+	},
+	devServer: {
+		inline: true,
+		hot: true,
+		port: 8080
 	},
 	module: {
 		loaders: [
 			{
 				test: /\.js$/,
-				loader: "babel-loader",
+				loader: "babel",
 				include: __dirname,
-				exclude: /node_modules/
+				exclude: /node_modules/,
+				query: {
+					presets: ["es2015", "react", "react-hmre"]
+				}
+		
 			}
+
 		]
 
 	}

@@ -3,7 +3,7 @@ import {render} from "react-dom";
 
 class AppleStore extends Component {
 	render() {
-		return <div> "Hello world" </div>
+		return <div> "Hello world?" </div>
 	}
 
 }
