@@ -1,0 +1,37 @@
+[
+	{
+		"model": "Macbook",
+		"year": 2015,
+		"price": 1000
+	},
+	{
+		"model": "Macbook Pro 13, i5, 8G, 128G SSD",
+		"year": 2013,
+		"price": 1100
+	},
+	{
+		"model": "Macbook Pro 15, i7, 16G, 500G SSd",
+		"year": 2016,
+		"price": 2300
+	},
+	{
+		"model": "Macbook Pro 13, i5, 8G, 128 SSD",
+		"year": 2016,
+		"price": 1700
+	},
+	{
+		"model": "Macbook Air 11, i3, 128 SSD",
+		"year": 2014,
+		"price": 700
+	},
+	{
+		"model": "Macbook Air 13, i3, 128 SSD",
+		"year": 2016,
+		"price": 900
+	},
+	{
+		"model": "Macbook Air 11, i3, 256 SSD",
+		"year": 2015,
+		"price": 800
+	}
+]

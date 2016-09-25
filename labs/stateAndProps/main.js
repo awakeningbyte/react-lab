@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import ReactDom,{render} from 'react-dom';
 import List from './list';
 import Search from './search';
+import models from 'json!./data/models.json';
 
 class Main extends Component {
 	render() {
