@@ -2,7 +2,7 @@ var  path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-	entry: "./app.js",
+	entry: "./src/app.js",
 	output: {
 		path:	"./dist",
 		filename: "bundle.js",
@@ -25,10 +25,24 @@ module.exports = {
 					presets: ["es2015", "react", "react-hmre"]
 				}
 		
+			},
+			{
+				test: /\.css/,
+				loader: "style-loader!css-loader"
+			},
+			{ 
+				test: /\.scss$/,
+				loader: 'style!css!sass?outputStyle=compressed'
+			},
+			{
+				test: /\.svg$/,
+				loader: 'url'
 			}
 
 		]
-
+	},
+	sassLoader: {
+		includePaths: ["./node_modules", "./node_modules/grommet/node_modules"]
 	}
 
 }
