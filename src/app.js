@@ -1,12 +1,11 @@
 import React, {Component} from "react";
 import {render} from "react-dom";
+import ProductSelection from "./product_selection"
 
 class AppleStore extends Component {
 	render() {
-		return <div> "Hello world?" </div>
+		return <ProductSelection />
 	}
-
 }
-
 
 render(<AppleStore />, document.getElementById("content"));
