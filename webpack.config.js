@@ -25,10 +25,20 @@ module.exports = {
 					presets: ["es2015", "react", "react-hmre"]
 				}
 		
+			},
+			{
+				test: /\.css/,
+				loader: "style-loader!css-loader"
+			},
+			{ 
+				test: /\.scss$/,
+				loader: 'style!css!sass?outputStyle=compressed'
 			}
 
 		]
-
+	},
+	sassLoader: {
+		includePaths: ["./node_modules", "./node_modules/grommet/node_modules"]
 	}
 
 }
