@@ -17,11 +17,15 @@ class Main extends Component {
 		this.setState({models: models});
 	}
 
+	handleSearch(e) {
+		this.setState({searchText: e.target.value});
+	}
+
 	render() {
 		return <div>
 			<h1> Compoent</h1>
-			<Search/>
-			<List/>
+			<Search searchText={this.state.searchText} onSearch={this.handleSearch.bind(this)}/>
+			<List models={this.state.models}/>
 		</div>
 	}
 }
