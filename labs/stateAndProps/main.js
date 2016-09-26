@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ReactDom,{render} from 'react-dom';
 import List from './list';
-import Search from './search';
+import SearchBar from './search';
 import models from 'json!./data/models.json';
 
 class Main extends Component {
@@ -25,7 +25,7 @@ class Main extends Component {
 		let filtered_models = this.state.models.filter(({model,year,price}) => `${year}${model}`.indexOf(this.state.searchText) > -1);
 		return <div>
 			<h1> Compoent</h1>
-			<Search searchText={this.state.searchText} onSearch={this.handleSearch.bind(this)}/>
+			<SearchBar searchText={this.state.searchText} onSearch={this.handleSearch.bind(this)}/>
 			<List models={filtered_models} />
 		</div>
 	}

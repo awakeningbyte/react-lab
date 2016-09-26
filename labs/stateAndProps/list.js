@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import {render} from 'react-dom';
 
-class List extends Component {
+class ModelList extends Component {
 	render() {
 		let content;
 		if (this.props.models.length > 0) {
@@ -17,4 +17,13 @@ class List extends Component {
 		</div>
 	}
 }
-export default List;
+
+ModelList.propTypes = {
+	models: PropTypes.arrayOf(PropTypes.shape({
+		model: PropTypes.string,
+		year: PropTypes.number,
+		price: PropTypes.price
+	}))
+}
+
+export default ModelList;
