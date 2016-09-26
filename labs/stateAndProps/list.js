@@ -9,7 +9,7 @@ class List extends Component {
 			{this.props.models.map( ({model,year,price},i) => <li key={i}>{year} {model}: ${price} </li>)}
 			</ul>
 		} else {
-			<div> No model found</div>
+			content =			<div> No model was found</div>
 		}
 
 		return <div>

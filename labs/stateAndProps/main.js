@@ -22,10 +22,11 @@ class Main extends Component {
 	}
 
 	render() {
+		let filtered_models = this.state.models.filter(({model,year,price}) => `${year}${model}`.indexOf(this.state.searchText) > -1);
 		return <div>
 			<h1> Compoent</h1>
 			<Search searchText={this.state.searchText} onSearch={this.handleSearch.bind(this)}/>
-			<List models={this.state.models}/>
+			<List models={filtered_models} />
 		</div>
 	}
 }
